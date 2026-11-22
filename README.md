@@ -72,8 +72,8 @@ short `README.md` with the exact file names and checksums.
 ### Step 1: clone and install the Python packages
 
 ```powershell
-git clone https://github.com/<your-username>/llvm-optimization-project.git
-cd llvm-optimization-project
+git clone https://github.com/Aryan-Solanki/LLVM-Optimization.git
+cd LLVM-Optimization
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt          # pandas, matplotlib, streamlit, altair, pygments
@@ -283,7 +283,8 @@ compare IR with IR and assembly with assembly.
 ## 7. Project structure
 
 ```
-llvm-optimization-project/
+LLVM-Optimization/
+├── LICENSE                 MIT
 ├── dashboard.py            Streamlit dashboard
 ├── run_all.py              one command: check, ask the model, build and measure every level
 ├── main.py                 the experiment from the command line
@@ -343,6 +344,10 @@ Environment variables (optional): `LLM_SERVER_URL` (default `http://127.0.0.1:80
 ---
 
 ## 10. Credits and licenses
+
+This project's code and documentation are released under the [MIT License](LICENSE).
+
+Third-party components keep their own licenses:
 
 * [LLVM / Clang](https://llvm.org) 17.0.6: Apache-2.0 with LLVM exceptions.
   [llvm-mingw](https://github.com/mstorsjo/llvm-mingw) by Martin Storsjö.
