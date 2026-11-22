@@ -1,0 +1,17 @@
+{#- Chat template for Meta LLM Compiler (Code Llama based).
+    The GGUF ships without a template, so llama.cpp would otherwise fall back to ChatML,
+    which this model has never seen. This reproduces Meta's training format:
+        [INST] {user}[/INST]{assistant}</s><s>[INST] {user}[/INST]
+    BOS for the first turn is added by llama-server itself. A system message, if any,
+    is prepended to the first user turn. -#}
+{%- set ns = namespace(sys='') -%}
+{%- for message in messages -%}
+  {%- if message.role == 'system' -%}
+    {%- set ns.sys = message.content | trim + '\n\n' -%}
+  {%- elif message.role == 'user' -%}
+    {{- '[INST] ' + ns.sys + (message.content | trim) + '[/INST]' -}}
+    {%- set ns.sys = '' -%}
+  {%- elif message.role == 'assistant' -%}
+    {{- message.content | trim + eos_token + bos_token -}}
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,76 @@
+# Streamlit theme generated from docs/design-system.md (Geist design language).
+# Every value here maps to a token in that file; ui/styles.css carries the rest.
+
+[server]
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+
+# colors.primary / ink — selected states, primary buttons, toggles, focus
+primaryColor = "#171717"
+# colors.canvas — the near-white sheet
+backgroundColor = "#fafafa"
+# colors.canvas-elevated — inputs, widgets, popovers
+secondaryBackgroundColor = "#ffffff"
+# colors.body — standard copy
+textColor = "#4d4d4d"
+# colors.hairline — every 1px border
+borderColor = "#ebebeb"
+showWidgetBorder = true
+showSidebarBorder = true
+# colors.link
+linkColor = "#0070f3"
+linkUnderline = false
+
+# Semantic tokens
+redColor = "#ee0000"
+redTextColor = "#c50000"
+orangeColor = "#f5a623"
+orangeTextColor = "#ab570a"
+orangeBackgroundColor = "#ffefcf"
+yellowColor = "#f5a623"
+yellowTextColor = "#ab570a"
+yellowBackgroundColor = "#ffefcf"
+blueColor = "#0070f3"
+blueTextColor = "#0761d1"
+blueBackgroundColor = "#d3e5ff"
+greenColor = "#0070f3"
+greenTextColor = "#0761d1"
+greenBackgroundColor = "#d3e5ff"
+violetColor = "#7928ca"
+violetTextColor = "#7928ca"
+violetBackgroundColor = "#d8ccf1"
+grayColor = "#8f8f8f"
+grayTextColor = "#4d4d4d"
+grayBackgroundColor = "#f2f2f2"
+
+# typography — Geist Sans for UI, Geist Mono for code
+font = "Geist:https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap"
+codeFont = "Geist Mono:https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap"
+baseFontSize = 14
+baseFontWeight = 400
+headingFontWeights = 600
+codeFontSize = "13px"
+codeTextColor = "#171717"
+codeBackgroundColor = "#ffffff"
+
+# rounded.sm — functional controls
+baseRadius = "6px"
+buttonRadius = "6px"
+
+dataframeBorderColor = "#ebebeb"
+dataframeHeaderBackgroundColor = "#fafafa"
+dataframeHeaderTextColor = "#8f8f8f"
+
+chartCategoricalColors = ["#0070f3", "#7928ca", "#8f8f8f"]
+
+[theme.sidebar]
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#4d4d4d"
+borderColor = "#ebebeb"
+primaryColor = "#171717"

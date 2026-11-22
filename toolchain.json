@@ -1,0 +1,8 @@
+{
+  "_about": "The project's single LLVM toolchain, used by BOTH workflows (compiler experiment and LLM Compiler). Paths are relative to this file's folder. Nothing is taken from PATH or environment variables; every tool must report exactly llvm_version, and clang must target target_triple, or the project refuses to run. See README.md, section 2.",
+  "llvm_version": "17.0.6",
+  "target_triple": "x86_64-w64-windows-gnu",
+  "clang": "toolchains/llvm-mingw-17.0.6-ucrt/bin/clang.exe",
+  "llvm_size": "toolchains/llvm-mingw-17.0.6-ucrt/bin/llvm-size.exe",
+  "opt": "llm/tools/llvm17/bin/opt.exe"
+}

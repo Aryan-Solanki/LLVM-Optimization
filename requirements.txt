@@ -1,0 +1,5 @@
+pandas>=2.0
+matplotlib>=3.7
+streamlit>=1.67   # dashboard uses segmented_control(required=), st.space, horizontal containers
+altair>=5.0
+pygments>=2.15
